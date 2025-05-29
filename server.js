@@ -25,7 +25,7 @@ app.use("/api/v1/transactions", require("./routes/transactionRoutes"));
 // static files
 app.use(express.static(path.join(__dirname, "./client/build")));
 
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
